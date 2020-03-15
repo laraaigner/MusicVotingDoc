@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
-<meta name="author" content="firstname lastname">
+<meta name="author" content="Lara Aigner, Irfan Muratspahic, Hanna Schauflinger">
 <link rel="icon" type="image/png" href="themes/favicon.png">
-<title>My Project</title>
+<title>MusicVoting</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -449,11 +449,11 @@ pre.rouge .hll * {
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>My Project</h1>
+<h1>MusicVoting</h1>
 <div class="details">
-<span id="author" class="author">firstname lastname</span><br>
-<span id="revnumber">version 1.0,</span>
-<span id="revdate">yyyy-mm-dd</span>
+<span id="author" class="author">Lara Aigner, Irfan Muratspahic, Hanna Schauflinger</span><br>
+<span id="revnumber">version 2.0,</span>
+<span id="revdate">2020-03-15</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -464,15 +464,15 @@ pre.rouge .hll * {
 <li><a href="#_istzustand">1.2. Istzustand</a></li>
 <li><a href="#_problemstellung">1.3. Problemstellung</a></li>
 <li><a href="#_aufgabenstellung">1.4. Aufgabenstellung</a></li>
-<li><a href="#_ziele">1.5. Ziele</a></li>
-<li><a href="#_mengengerüst">1.6. Mengengerüst</a></li>
-<li><a href="#_rahmenbedingungen">1.7. Rahmenbedingungen</a></li>
+<li><a href="#_funktionale_anforderungen">1.5. Funktionale Anforderungen</a></li>
+<li><a href="#_ziele">1.6. Ziele</a></li>
+<li><a href="#_mengengerüst">1.7. Mengengerüst</a></li>
+<li><a href="#_rahmenbedingungen">1.8. Rahmenbedingungen</a></li>
 </ul>
 </li>
 <li><a href="#_entwurf_wie_mache_ich_es">2. Entwurf "Wie mache ich es"</a>
 <ul class="sectlevel2">
 <li><a href="#_systemarchitektur">2.1. Systemarchitektur</a></li>
-<li><a href="#">2.2. &#8230;&#8203;</a></li>
 </ul>
 </li>
 <li><a href="#_projekthandbuch_organisatorische_rahmenbedigungen">3. Projekthandbuch "Organisatorische Rahmenbedigungen"</a>
@@ -490,48 +490,222 @@ pre.rouge .hll * {
 <div class="sect2">
 <h3 id="_ausgangssituation"><a class="anchor" href="#_ausgangssituation"></a>1.1. Ausgangssituation</h3>
 <div class="paragraph">
-<p>Die HTL Leonding ist eine HTL im oö. Zentralraum mit ca. 1000 Schülern und den Fachabteilungen Medientewchnik, Informatik, &#8230;&#8203;.</p>
+<p>Die HTBLA Leonding ist eine mittelgroße Schule im Zentralraum Oberösterreich.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_istzustand"><a class="anchor" href="#_istzustand"></a>1.2. Istzustand</h3>
-<div class="listingblock">
-<div class="content">
-<pre>Beschreibung der speziellen Situation zB in der Abteilung</pre>
-</div>
+<div class="paragraph">
+<p>Jedes Jahr finden zahlreiche Veranstaltungen, Feste und Feierlichkeiten statt.
+Musik wird gespielt, ganz egal welche Art von Veranstaltung stattfindet, Musik begleitet sie.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_problemstellung"><a class="anchor" href="#_problemstellung"></a>1.3. Problemstellung</h3>
-
+<div class="paragraph">
+<p>Es kann vorkommen, dass die Besucher/Teilnehmer etwaiger Veranstaltungen mit der Wahl
+des Musikstils bzw. im Allgemeinen mit der Wahl der Songs unzufrieden sind. Bei fixen
+Playlisten tritt außerdem das Problem auf, dass sich mit der Zeit die Songs wiederholen
+könnten. Ist keine vorgefertigte Playlist für das Event vorhanden, muss jedoch selbst
+eine Playlist erstellt werden, welches widerum eine zeitintensive Arbeit ist.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_aufgabenstellung"><a class="anchor" href="#_aufgabenstellung"></a>1.4. Aufgabenstellung</h3>
-<div class="sect3">
-<h4 id="_funktionale_anforderungen"><a class="anchor" href="#_funktionale_anforderungen"></a>1.4.1. Funktionale Anforderungen</h4>
+<div class="paragraph">
+<p>Es ist ein System zu Entwicklen bei dem sich Besucher mit ihrem Smartphone mittels
+QR-Code anmelden und somit Songs zu einer Playlist hinzufügen können, diese Playlist
+ist für andere verbunde Teilnehmer einsehbar wobei diese wiederum für Songs in dieser
+Playlist voten können oder ebenfalls eigene Songs hinzufügen können. Dies geschieht
+über das Videoportal YouTube, welches eine große Bandbreite an Musikauswahl liefert.
+Die Benutzeroberfläche für das Smartphone soll ebenfalls optimiert werden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_funktionale_anforderungen"><a class="anchor" href="#_funktionale_anforderungen"></a>1.5. Funktionale Anforderungen</h3>
+<div class="sect4">
+<h5 id="_anwendungsfalldiagramm_use_case_diagram"><a class="anchor" href="#_anwendungsfalldiagramm_use_case_diagram"></a>Anwendungsfalldiagramm (Use-Case-Diagram)</h5>
 <div class="imageblock">
 <div class="content">
-<img src="images/wireframe.png" alt="wireframe" width="376" height="84">
+<img src="images/usecase.png" alt="usecase" width="461" height="502">
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_song_hinzufügen"><a class="anchor" href="#_song_hinzufügen"></a>Song hinzufügen</h5>
+<div class="paragraph">
+<p>Ziel des Use Cases: Als User möchte ich ein Lied zur Playlist hinzufügen.
+Vorbedingung: User braucht ein Smartphone.
+Nachbedingung bei erfolgreicher Ausführung: Man muss mit dem richitgen WLan verbunden sein.</p>
+</div>
+<div class="paragraph">
+<p>Beschreibung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>mit WLan verbinden</p>
+</li>
+<li>
+<p>richtige Webseite aufrufen</p>
+</li>
+<li>
+<p>Song suchen</p>
+</li>
+<li>
+<p>auf Plus drücken</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Beteiligte Nutzer: Absolventen der HTL Leonding und Lehrer der HTL Leonding.</p>
+</div>
+<div class="paragraph">
+<p>Auslösendes Ereignis: Wenn der User einen bestimmten Song hören will.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_voten"><a class="anchor" href="#_voten"></a>Voten</h5>
+<div class="paragraph">
+<p>Ziel des Use Cases: Als User möchte ich ein Lied nach oben voten.
+Vorbedingung: User braucht ein Smartphone.
+Nachbedingung bei erfolgreicher Ausführung: Man muss mit dem richitgen WLan verbunden sein.</p>
+</div>
+<div class="paragraph">
+<p>Beschreibung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>mit WLan verbinden</p>
+</li>
+<li>
+<p>richtige Webseite aufrufen</p>
+</li>
+<li>
+<p>für Song voten</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Beteiligte Nutzer: Absolvente der HTL Leonding und Lehrer der HTL Leonding.</p>
+</div>
+<div class="paragraph">
+<p>Auslösendes Ereignis: Wenn dem User ein Lied, welches bereits in der Playlist ist, gefällt.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_song_überspringen"><a class="anchor" href="#_song_überspringen"></a>Song überspringen</h5>
+<div class="paragraph">
+<p>Ziel des Use Cases: Als Admin möchte ich ein Lied nicht hören.
+Vorbedingung: Admin muss auf einem Bildschirm laufen.
+Nachbedingung bei erfolgreicher Ausführung: Admin muss das Passwort wissen.</p>
+</div>
+<div class="paragraph">
+<p>Beschreibung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Seite aufrufen</p>
+</li>
+<li>
+<p>Anmelden</p>
+</li>
+<li>
+<p>Song überspringen</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Beteiligte Nutzer: Administrator der Applikation.</p>
+</div>
+<div class="paragraph">
+<p>Auslösendes Ereignis: Wenn ein Lied nicht angebracht ist oder es dem Admin nicht gefällt.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_song_löschen"><a class="anchor" href="#_song_löschen"></a>Song löschen</h5>
+<div class="paragraph">
+<p>Ziel des Use Cases: Als Admin möchte ich ein aus der Playlist löschen.
+Vorbedingung: Admin muss auf einem Bildschirm laufen.
+Nachbedingung bei erfolgreicher Ausführung: Admin muss das Passwort wissen.</p>
+</div>
+<div class="paragraph">
+<p>Beschreibung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Seite aufrufen</p>
+</li>
+<li>
+<p>Anmelden</p>
+</li>
+<li>
+<p>Lied löschen</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Beteiligte Nutzer: Administrator der Applikation.</p>
+</div>
+<div class="paragraph">
+<p>Auslösendes Ereignis: Wenn ein Lied nicht angebracht ist oder es dem Admin nicht gefällt.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_nichtfunktionale_anforderungen_nfa"><a class="anchor" href="#_nichtfunktionale_anforderungen_nfa"></a>1.4.2. Nichtfunktionale Anforderungen (NFA)</h4>
+<h4 id="_nichtfunktionale_anforderungen_nfa"><a class="anchor" href="#_nichtfunktionale_anforderungen_nfa"></a>1.5.6. Nichtfunktionale Anforderungen (NFA)</h4>
 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ziele"><a class="anchor" href="#_ziele"></a>1.5. Ziele</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_mengengerüst"><a class="anchor" href="#_mengengerüst"></a>1.6. Mengengerüst</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_rahmenbedingungen"><a class="anchor" href="#_rahmenbedingungen"></a>1.7. Rahmenbedingungen</h3>
+<h3 id="_ziele"><a class="anchor" href="#_ziele"></a>1.6. Ziele</h3>
 <div class="paragraph">
-<p>zB Vorgaben vom Auftraggeber</p>
+<p>Im Rahmen dieser Veranstaltungen liegt es im Interesse der Besucher/Teilnehmer
+eine musikalische Begleitung zu haben, die jedermanns Geschmack trifft.
+Daraus folgt gute Laute und ein Erfolgserlebnis bei den Besuchern,
+unabhägig davon welche Art der Veranstaltung besucht wird.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mengengerüst"><a class="anchor" href="#_mengengerüst"></a>1.7. Mengengerüst</h3>
+<div class="paragraph">
+<p>Die HTL Leonding hat jährlich bis zu 150 Absolventen.
+Noch dazu kommen einige Absolventen der vergangenen Jahre.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rahmenbedingungen"><a class="anchor" href="#_rahmenbedingungen"></a>1.8. Rahmenbedingungen</h3>
+<div class="sect3">
+<h4 id="_benutzbarkeitsanforderung"><a class="anchor" href="#_benutzbarkeitsanforderung"></a>1.8.1. Benutzbarkeitsanforderung:</h4>
+<div class="paragraph">
+<p>Die Applikation soll lauffähig sein.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_effizienzanforderung"><a class="anchor" href="#_effizienzanforderung"></a>1.8.2. Effizienzanforderung:</h4>
+<div class="paragraph">
+<p>Lieder sollen in Echtzeit zur Playlist hinzugefügt werden und Playlist soll zeitgleich bei allen neu sortiert werden.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_wartbarkeits_und_portierbarkeitsanforderung"><a class="anchor" href="#_wartbarkeits_und_portierbarkeitsanforderung"></a>1.8.3. Wartbarkeits- und Portierbarkeitsanforderung:</h4>
+<div class="paragraph">
+<p>Die Applikation soll später von Youtube streamen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_sicherheitsanforderung"><a class="anchor" href="#_sicherheitsanforderung"></a>1.8.4. Sicherheitsanforderung:</h4>
+<div class="paragraph">
+<p>Die Playlist soll immer up to date sein. Nur der Admin darf gewisse Aktivitäten durchführen.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_gesetzliche_anforderung"><a class="anchor" href="#_gesetzliche_anforderung"></a>1.8.5. Gesetzliche Anforderung:</h4>
+<div class="paragraph">
+<p>Die Applikation darf mp3 files nicht durchs öffentliche Netzwerk schicken.</p>
+</div>
 </div>
 </div>
 </div>
@@ -541,11 +715,11 @@ pre.rouge .hll * {
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_systemarchitektur"><a class="anchor" href="#_systemarchitektur"></a>2.1. Systemarchitektur</h3>
-
+<div class="imageblock">
+<div class="content">
+<img src="images/syspec.png" alt="syspec" width="767" height="447">
 </div>
-<div class="sect2">
-<h3 id=""><a class="anchor" href="#"></a>2.2. &#8230;&#8203;</h3>
-
+</div>
 </div>
 </div>
 </div>
@@ -554,16 +728,10 @@ pre.rouge .hll * {
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_gantt_diagramm"><a class="anchor" href="#_gantt_diagramm"></a>3.1. GANTT-Diagramm</h3>
-<div class="paragraph">
-<p>mit User-Stories (definiert in YouTrack)</p>
-</div>
 <div class="imageblock">
 <div class="content">
-<img src="images/gantt-protoype.png" alt="gantt protoype" width="353" height="81">
+<img src="images/gantt-protoype.png" alt="gantt protoype" width="721" height="145">
 </div>
-</div>
-<div class="paragraph">
-<p><a href="demo.html">Demo</a></p>
 </div>
 </div>
 </div>
@@ -571,8 +739,8 @@ pre.rouge .hll * {
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0<br>
-Last updated 2020-03-13 12:30:25 UTC
+Version 2.0<br>
+Last updated 2020-03-15 20:16:47 UTC
 </div>
 </div>
 </body>
