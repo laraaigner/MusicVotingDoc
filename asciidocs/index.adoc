@@ -1,6 +1,6 @@
-= My Project
-firstname lastname
-1.0, yyyy-mm-dd
+= MusicVoting
+Lara Aigner, Irfan Muratspahic, Hanna Schauflinger
+2.0, 2020-03-15
 :sourcedir: ../src/main/java
 :icons: font
 :toc: left
@@ -11,55 +11,255 @@ firstname lastname
 
 === Ausgangssituation
 
-Die HTL Leonding ist eine HTL im oö. Zentralraum mit ca. 1000 Schülern und den Fachabteilungen Medientewchnik, Informatik, ....
+Die HTBLA Leonding ist eine mittelgroße Schule im Zentralraum Oberösterreich.
 
 === Istzustand
-----
-Beschreibung der speziellen Situation zB in der Abteilung
-----
-=== Problemstellung
-=== Aufgabenstellung
-==== Funktionale Anforderungen
 
-[plantuml,wireframe,png]
+Jedes Jahr finden zahlreiche Veranstaltungen, Feste und Feierlichkeiten statt.
+Musik wird gespielt, ganz egal welche Art von Veranstaltung stattfindet, Musik begleitet sie.
+
+=== Problemstellung
+
+Es kann vorkommen, dass die Besucher/Teilnehmer etwaiger Veranstaltungen mit der Wahl
+des Musikstils bzw. im Allgemeinen mit der Wahl der Songs unzufrieden sind. Bei fixen
+Playlisten tritt außerdem das Problem auf, dass sich mit der Zeit die Songs wiederholen
+könnten. Ist keine vorgefertigte Playlist für das Event vorhanden, muss jedoch selbst
+eine Playlist erstellt werden, welches widerum eine zeitintensive Arbeit ist.
+
+=== Aufgabenstellung
+
+Es ist ein System zu Entwicklen bei dem sich Besucher mit ihrem Smartphone mittels
+QR-Code anmelden und somit Songs zu einer Playlist hinzufügen können, diese Playlist
+ist für andere verbunde Teilnehmer einsehbar wobei diese wiederum für Songs in dieser
+Playlist voten können oder ebenfalls eigene Songs hinzufügen können. Dies geschieht
+über das Videoportal YouTube, welches eine große Bandbreite an Musikauswahl liefert.
+Die Benutzeroberfläche für das Smartphone soll ebenfalls optimiert werden.
+
+=== Funktionale Anforderungen
+
+===== Anwendungsfalldiagramm (Use-Case-Diagram)
+
+[plantuml,usecase,png]
 ----
-@startsalt
-{
-Name         | "                 "
-Modifiers:   | { (X) public | () default | () private | () protected
-	            [] abstract | [] final   | [] static }
-Superclass:  | { "java.lang.Object " | [Browse...] }
+@startuml
+skinparam handwritten true
+left to right direction
+actor user #LightSalmon
+actor admin #LightSalmon
+actor client #Brown
+skinparam usecase {
+    BackgroundColor LightSalmon
+	BorderColor Black
+
+	ArrowColor MediumVioletRed
+	ActorBorderColor black
 }
-@endsalt
+
+skinparam {
+    Backgroundcolor WhiteSmoke
+}
+rectangle {
+user -- (Voten eines Songs)
+user -- (Song zu Playlist hinzufügen)
+(Song zu Playlist hinzufügen) .> (Suche des Songs über YouTube)
+admin -- (Löschen von Songs)
+admin -- (Playlist überarbeiten)
+(Songs/Playlist abspielen) -- client
+}
+@enduml
 ----
+
+===== Song hinzufügen
+
+Ziel des Use Cases: Als User möchte ich ein Lied zur Playlist hinzufügen.
+Vorbedingung: User braucht ein Smartphone.
+Nachbedingung bei erfolgreicher Ausführung: Man muss mit dem richitgen WLan verbunden sein.
+
+Beschreibung:
+
+* mit WLan verbinden
+* richtige Webseite aufrufen
+* Song suchen
+* auf Plus drücken
+
+Beteiligte Nutzer: Absolventen der HTL Leonding und Lehrer der HTL Leonding.
+
+Auslösendes Ereignis: Wenn der User einen bestimmten Song hören will.
+
+===== Voten
+
+Ziel des Use Cases: Als User möchte ich ein Lied nach oben voten.
+Vorbedingung: User braucht ein Smartphone.
+Nachbedingung bei erfolgreicher Ausführung: Man muss mit dem richitgen WLan verbunden sein.
+
+Beschreibung:
+
+* mit WLan verbinden
+* richtige Webseite aufrufen
+* für Song voten
+
+Beteiligte Nutzer: Absolvente der HTL Leonding und Lehrer der HTL Leonding.
+
+Auslösendes Ereignis: Wenn dem User ein Lied, welches bereits in der Playlist ist, gefällt.
+
+===== Song überspringen
+
+Ziel des Use Cases: Als Admin möchte ich ein Lied nicht hören.
+Vorbedingung: Admin muss auf einem Bildschirm laufen.
+Nachbedingung bei erfolgreicher Ausführung: Admin muss das Passwort wissen.
+
+Beschreibung:
+
+* Seite aufrufen
+* Anmelden
+* Song überspringen
+
+Beteiligte Nutzer: Administrator der Applikation.
+
+Auslösendes Ereignis: Wenn ein Lied nicht angebracht ist oder es dem Admin nicht gefällt.
+
+===== Song löschen
+
+Ziel des Use Cases: Als Admin möchte ich ein aus der Playlist löschen.
+Vorbedingung: Admin muss auf einem Bildschirm laufen.
+Nachbedingung bei erfolgreicher Ausführung: Admin muss das Passwort wissen.
+
+Beschreibung:
+
+* Seite aufrufen
+* Anmelden
+* Lied löschen
+
+Beteiligte Nutzer: Administrator der Applikation.
+
+Auslösendes Ereignis: Wenn ein Lied nicht angebracht ist oder es dem Admin nicht gefällt.
+
 ==== Nichtfunktionale Anforderungen (NFA)
 === Ziele
+Im Rahmen dieser Veranstaltungen liegt es im Interesse der Besucher/Teilnehmer
+eine musikalische Begleitung zu haben, die jedermanns Geschmack trifft.
+Daraus folgt gute Laute und ein Erfolgserlebnis bei den Besuchern,
+unabhägig davon welche Art der Veranstaltung besucht wird.
+
 === Mengengerüst
+Die HTL Leonding hat jährlich bis zu 150 Absolventen.
+Noch dazu kommen einige Absolventen der vergangenen Jahre.
+
 === Rahmenbedingungen
-zB Vorgaben vom Auftraggeber
+==== Benutzbarkeitsanforderung:
+Die Applikation soll lauffähig sein.
+
+==== Effizienzanforderung:
+Lieder sollen in Echtzeit zur Playlist hinzugefügt werden und Playlist soll zeitgleich bei allen neu sortiert werden.
+
+==== Wartbarkeits- und Portierbarkeitsanforderung:
+Die Applikation soll später von Youtube streamen.
+
+==== Sicherheitsanforderung:
+Die Playlist soll immer up to date sein. Nur der Admin darf gewisse Aktivitäten durchführen.
+
+==== Gesetzliche Anforderung:
+Die Applikation darf mp3 files nicht durchs öffentliche Netzwerk schicken.
+
+
+
+
 
 == Entwurf "Wie mache ich es"
 === Systemarchitektur
-=== ...
+
+[plantuml, syspec, png]
+----
+skinparam handwritten true
+skinparam  {
+    BackgroundColor white
+	BorderColor Black
+
+
+	ArrowColor MediumVioletRed
+	ActorBorderColor black
+}
+
+skinparam node {
+    BackgroundColor LightSalmon
+}
+
+skinparam {
+    Backgroundcolor WhiteSmoke
+}
+
+skinparam cloud {
+    BackgroundColor LightSalmon
+}
+
+skinparam database {
+    BackgroundColor LightSalmon
+}
+
+rectangle "Docker" {
+    database database [
+        DerbyDB
+    ]
+        node server [
+    Jarkata EE
+    ===
+    Backend
+    ]
+    node server2 [
+    Webserver
+    ===
+    VueJS Mobile Client
+    ]
+    node server3 [
+    Webserver
+    ===
+    VueJS Laptop Client
+    ]
+    server2 == server
+    server3 == server
+    server == database
+}
+cloud internet [
+    WLAN
+]
+node mobile [
+    Mobile Client
+]
+node laptop [
+    Abspiel Client
+]
+internet == server2
+internet == server3
+internet == mobile
+internet == laptop
+----
 
 == Projekthandbuch "Organisatorische Rahmenbedigungen"
 
 === GANTT-Diagramm
 
-mit User-Stories (definiert in YouTrack)
-
 [plantuml,gantt-protoype,png]
 ----
-@startuml
-[Test prototype] lasts 10 days
-[Prototype completed] happens at [Test prototype]'s end
-[Setup assembly line] lasts 12 days
-[Setup assembly line] starts at [Test prototype]'s end
-[Test prototype 2] lasts 3 days
-[Test prototype 2] starts at [Prototype completed]'s end
-@enduml
+@startgantt
+[Introduction] lasts 15 days
+[Introduction completed] happens at [Introduction]'s end
+[Streaming] lasts 20 days
+[Streaming] starts at [Introduction]'s end
+[Streaming completed] happens at [Streaming]'s end
+[Design AbspielClient] lasts 10 days
+[Design AbspielClient] starts at [Streaming completed]'s end
+[Testing] lasts 5 days
+[Testing] starts at [Streaming completed]'s end
+[Design] lasts 20 days
+[Design] starts at [Introduction completed]'s end
+[Animation] lasts 20 days
+[Animation] starts at [Introduction completed]'s end
+[Introduction] is colored in LightSalmon/Black
+[Streaming] is colored in LightSalmon/Black
+[Design] is colored in LightSalmon/Black
+[Animation] is colored in LightSalmon/Black
+[Testing] is colored in LightSalmon/Black
+[Design AbspielClient] is colored in LightSalmon/Black
+@endgantt
 ----
-
-
-link:demo.html[Demo]
 
