@@ -1,0 +1,49 @@
+= Besprechungsprotokoll 21.04.2020
+Lara Aigner
+1.0, 2020-04-20
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:toc: left
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Lara Aigner, Irfan Muratspahic, Hanna Schauflinger
+|
+
+|T. Stütz
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Discord
+
+|von-bis
+|Mo. 21.4.2020, 6.-7. EH
+|Dauer
+|1 h
+|===
+
+
+
+== Besprochene Themen
+
+* Github-Repository
+* Github-Page
+* Gesamte Applikation
+
+=== Vereinbarungen und Entscheidungen
+
+* Das Github-Repository soll public gemacht
+* Github-Pages:
+** Istzustand ändern (Es gibt bereits eine bestehende Applikation)
+** Sollzustand (Die Applikation nachdem das Voten über YouTube möglich ist)
+** Use-Case-Diagramm -> zweifärbig machen, einmal für bereits bestehende Funktionen & hinzugekommene Funktionen
+* Zu Beginn der Schule:
+** Eigener Raum, indem man die Applikation startet und Schülern das Voten ermöglicht
+* Bewertungssystem in YouTube -> versch. Stufen, Filter setzen können um "unanständige" Songs nicht abzuspielen
+* Liste zusammenstellen mit Songs für AutoPlay -> File od. DB
