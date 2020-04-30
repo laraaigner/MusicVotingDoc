@@ -35,7 +35,7 @@ ifndef::imagesdir[:imagesdir: images]
 
 === Vereinbarungen und Entscheidungen
 
-* Namensänerung:
+* Namensänderung:
 ** Wort "DJ" umwandeln, evtl. kürzen, Gegenvorschläge bringen, od. 2er-Wort-Kombination
 ** We R DJ, Choice&Noise, UPlay, UVote, WePlay, PlayBack, Scheibenreiter
 * Anhand von Bildern durchbesprochen, wie der Filter-Schieberegler aussehen soll
