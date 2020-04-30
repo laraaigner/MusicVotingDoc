@@ -1,0 +1,42 @@
+= Besprechungsprotokoll 30.04.2020
+Lara Aigner
+1.0, 2020-04-30
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:toc: left
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Lara Aigner, Irfan Muratspahic, Hanna Schauflinger
+|
+
+|C. Eisserer, P. Engleitner
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|Discord
+
+|von-bis
+|Do. 30.4.2020, 4. EH
+|Dauer
+|20min
+|===
+
+== Besprochene Themen
+
+* Namensänderung
+* Design (Filtern)
+
+=== Vereinbarungen und Entscheidungen
+
+* Namensänerung:
+** Wort "DJ" umwandeln, evtl. kürzen, Gegenvorschläge bringen, od. 2er-Wort-Kombination
+** We R DJ, Choice&Noise, UPlay, UVote, WePlay, PlayBack, Scheibenreiter
+* Anhand von Bildern durchbesprochen, wie der Filter-Schieberegler aussehen soll
+(bzw. welcher Text und/ob Icons abgebildet werden sollen)
