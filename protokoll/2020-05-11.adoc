@@ -36,7 +36,7 @@ ifndef::imagesdir[:imagesdir: images]
 === Vereinbarungen und Entscheidungen
 
 * Filter:
-** "censored"-Symbol abbilden wenn SOng von Blacklist gespielt wird
+** "censored"-Symbol abbilden wenn Song von Blacklist gespielt wird
 ** Blacklist behinhaltet Songs selbst
 * Schule:
 ** Probestation aufbauen
