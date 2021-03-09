@@ -1,0 +1,49 @@
+= Besprechungsprotokoll 09.03.2021
+Lara Aigner
+1.0, 2020-05-1
+ifndef::imagesdir[:imagesdir: images]
+:icons: font
+//:toc: left
+
+.Teilnehmer
+|===
+|anwesend |Verteiler
+
+|Lara Aigner, Irfan Muratspahic, Hanna Schauflinger
+|
+
+|T. Stütz
+|
+|===
+
+.Ort und Zeit
+[cols=2*]
+|===
+|Ort
+|HTL Leonding
+
+|von-bis
+|Di. 09.03.2021
+|Dauer
+|30 min
+|===
+
+== Besprochene Themen
+
+* Präsentation für Project Award
+* Systemarchitektur
+
+=== Vereinbarungen und Entscheidungen
+
+* Präsentation:
+** Problem - Folie hinzufügen (API zb. Keys)
+** Video teilen
+*** 'Seid nicht lahm, verwendet Musicvoting' zum Abschluss
+** nicht zu sehr Mundart
+** nicht zu formell
+** Screenshots hinzufügen, bei der Lösung
+** Funktionsweise etwas näher erklären
+** Warum nehmen wir Quarkus? evtl. Folie mit Logos
+* Systemarchitektur:
+** nicht passend für so eine Präsentation
+** mit zB. Keynotes eine ansprechendere Systemarchitektur machen
